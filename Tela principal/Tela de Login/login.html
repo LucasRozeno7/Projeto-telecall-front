@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/icone.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>Login</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="form-image">
+            <img src="img/telelogo.png">
+        </div>
+    </div>
+    <div class="form">
+        <form id="form" >
+            <div class="form-header">
+                <div class="title">
+                    <h1 style="color: white; font-style: italic;">Login</h1>
+                </div>
+            </div>
+            <div class="input-group">
+                <div class="input-box">
+                    <label for="usuario">Nome de Usuário:</label>
+                    <input id="usuario" type="text" name="usuario" placeholder="Digite seu nome de usuário" maxlength="6"  required>
+                    <p class="error errorH">Usuário ou senha inválido</p>
+                </div>
+                <div class="input-box">
+                    <label for="senha">Senha:</label>
+                    <input id="senha" type="password" name="senha" placeholder="Digite sua senha" maxlength="8" required>
+                    <p class="error errorH">Usuário ou senha inválido</p>
+                    <div id="icon" onclick="showHide()" ></div>
+                </div>
+            </div>
+            <div class="continue-button">
+                <button  >Entrar</button>
+                <a href="../Tela de cadastro/Cadastro.html" class="cadastro">Cadastre-se</a>
+            </div>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

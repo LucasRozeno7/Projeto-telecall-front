@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="shortcut icon" href="img/icone.ico" type="image/x-icon">
+   <title>Cadastro</title>
+   <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+   <div class="formulario">
+      <form name="form" id="form" action="#" method="post">
+         <div class="form-header">
+            <h1>Cadastre-se</h1>
+            <a href="../index.html"> <img src="img/imagen.png"></a>
+         </div>
+         <div class="inputgroup">
+            <div class="inputbox">
+               <label for="nome">Nome completo</label>
+               <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" onkeyup="semnumero(this)"
+                  minlength="15" maxlength="65" class="invalido">
+               <p class="error errorH">Digite seu nome</p>
+            </div>
+            <div class="inputbox">
+               <label for="nomemae">Nome da mãe</label>
+               <input type="text" id="nomemae" name="nomemae" placeholder="Digite nome da mãe" onkeyup="semnumero(this)"
+                  minlength="10" maxlength="65">
+               <p class="error errorH">Digite nome materno</p>
+            </div>
+            <div class="inputbox">
+               <label for="cel">Celular</label>
+               <input type="tel" id="cel" name="cel" title="Digite o Celular" maxlength="15"
+                  placeholder="Ex.(99)99999-9999" onkeyup="ajustaCelular(this)">
+               <p class="error errorH">Digite seu celular corretamente</p>
+            </div>
+            <div class="inputbox">
+               <label for="fixo">Telefone fixo</label>
+               <input type="tel" id="fixo" name="fixo" name="fixo" maxlength="14" placeholder="Ex.(99)9999-9999"
+                  onkeyup="ajustaTelefone(this)">
+               <p class="error errorH">Digite seu Telefone fixo corretamente</p>
+            </div>
+            <div class="inputbox">
+               <label for="cpf">CPF</label>
+               <input type="text" id="cpf" name="cpf" onblur="validarCPF(this)" maxlength="14"
+                  placeholder=" Ex. xxx.xxx.xxx-xx" onkeyup="ajustaCpf(this)">
+               <p class="error errorH">Digite seu CPF corretamente</p>
+            </div>
+            <div class="inputbox">
+               <label for="datanascimento">Data de nascimento</label>
+               <input type="date" id="datanascimento" name="datanascimento">
+               <p class="error errorH">Idade minima 18 anos</p>
+            </div>
+            <div class="gender-input">
+               <p>Gênero:</p>
+              <select name="genero" id="genero">
+                     <option value="">--</option>
+                     <option value="Masculino">Masculino</option>
+                     <option value="Feminino">Feminino</option>
+                     <option value="Outro">Outro</option>
+              </select>
+              <p class="error errorH" style="margin-left: 20px;" >campo vazio</p>
+            </div>
+            <div class="inputgroup2">
+               <div class="divcep">
+                  <div class="inputbox">
+                     <h2>Endereço</h2>
+                     <label>CEP</label>
+                     <input name="cep" type="text" id="cep" value="" " maxlength=" 9" onblur="pesquisacep(this.value);"
+                        style="max-width: 150px;" placeholder="Digite seu CEP">
+                     <p class="error errorH">CEP não encontrado ou inválido</p>
+                  </div>
+               </div>
+               <div class="inputbox">
+                  <label>Rua</label>
+                  <input name="rua" type="text" id="rua" placeholder="Rua">
+                  <p class="error errorH">campo vazio</p>
+               </div>
+               <div class="inputbox">
+                  <label>Numero</label>
+                  <input type="text" id="num" style="max-width: 50px;" placeholder="Nº">
+                  <p class="error errorH">campo vazio</p>
+               </div>
+               <div class="inputbox">
+                  <label>Bairro</label>
+                  <input name="bairro" type="text" id="bairro" placeholder="Bairro">
+                  <p class="error errorH">campo vazio</p>
+               </div>
+               <div class="inputbox">
+                  <label>Cidade</label>
+                  <input name="cidade" type="text" id="cidade" placeholder="Cidade">
+                  <p class="error errorH">campo vazio</p>
+               </div>
+               <div class="inputbox">
+                  <label>Estado</label>
+                  <select name="uf" type="text" id="uf">
+                     <option value="">--</option>
+                     <option value="AC">Acre</option>
+                     <option value="AL">Alagoas</option>
+                     <option value="AP">Amapá</option>
+                     <option value="AM">Amazonas</option>
+                     <option value="BA">Bahia</option>
+                     <option value="CE">Ceará</option>
+                     <option value="DF">Distrito Federal</option>
+                     <option value="ES">Espírito Santo</option>
+                     <option value="GO">Goiás</option>
+                     <option value="MA">Maranhão</option>
+                     <option value="MT">Mato Grosso</option>
+                     <option value="MS">Mato Grosso do Sul</option>
+                     <option value="MG">Minas Gerais</option>
+                     <option value="PA">Pará</option>
+                     <option value="PB">Paraíba</option>
+                     <option value="PR">Paraná</option>
+                     <option value="PE">Pernambuco</option>
+                     <option value="PI">Piauí</option>
+                     <option value="RJ">Rio de Janeiro</option>
+                     <option value="RN">Rio Grande do Norte</option>
+                     <option value="RS">Rio Grande do Sul</option>
+                     <option value="RO">Rondônia</option>
+                     <option value="RR">Roraima</option>
+                     <option value="SC">Santa Catarina</option>
+                     <option value="SP">São Paulo</option>
+                     <option value="SE">Sergipe</option>
+                     <option value="TO">Tocantins</option>
+                  </select>
+                  <p class="error errorH">campo vazio</p>
+
+               </div>
+            </div>
+            <h2>Conta</h2>
+            <div class="inputgroup2">
+               <div class="inputbox">
+                  <label for="login">Usuário</label>
+                  <input type="text" id="login" name="login" maxlength="6" placeholder="Login com 6 caracteres"
+                     onkeyup="ajustasenha(this)">
+                  <p class="error errorH">Digite um Usuário com 6 letras</p>
+               </div>
+               <div class="inputbox">
+                  <label for="senha">Digite uma senha</label>
+                  <input type="password" id="senha" name="senha" maxlength="8" placeholder="Senha com 8 letras"
+                     onkeyup="ajustasenha(this)">
+                  <p class="error errorH">Digite uma senha de 8 letras</p>
+               </div>
+               <div id="icon" onclick="showHide()"></div>
+               <div class=" inputbox">
+                  <label for="senha2">Confirme sua senha</label>
+                  <input type="password" id="senha2" name="senha2" maxlength="8" placeholder="Digite a mesma senha"
+                     onkeyup="ajustasenha(this)">
+                  <p class="error errorH">As senhas devem ser iguais</p>
+               </div>
+               <div id="icon2" onclick="showHide2()"></div>
+            </div>
+ 
+         </div>
+        
+         <div class="continue-button">
+            <button type="submit" id="btn">CADASTRE-SE</button>
+         </div>
+      </form>
+      <div class="msgfinal errorH">
+         <h2>Cadastro feito com sucesso!</h2>
+         <a class="btnlog" href="../Tela de Login/login.html">Faça Login!</a>
+      </div>
+   </div>
+
+
+
+   <script src="script.js"></script>
+</body>
+
+</html>

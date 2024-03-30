@@ -1,0 +1,298 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'inter', sans-serif;
+
+}
+
+
+
+.formulario {
+    max-width: 700px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    box-shadow: 0px 0px 5px 2px #003b71;
+    padding: 3rem;
+    border-radius: 15px;
+}
+
+.formulario h2 {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin: auto;
+    padding: 15px;
+}
+
+.divcep {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+}
+
+
+.form-header {
+    color: black;
+    margin-bottom: 0.1rem;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 10px;
+    text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.584);
+}
+
+
+
+.form-header h1::after {
+    content: '';
+    display: block;
+    width: 5rem;
+    height: 0.3rem;
+    background-color: #0170B9;
+    margin: 0 auto;
+    position: absolute;
+    border-radius: 10px;
+}
+
+.form-header img:hover {
+    transform: scale(1.1);
+}
+
+
+.inputgroup {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.inputgroup2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.inputgroup2 input {
+    width: 400px;
+}
+
+
+
+.inputbox {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+
+
+.inputbox input {
+    border: white;
+    margin: 0.6rem 0;
+    padding: 0.8rem 1.2rem;
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px #000000c1;
+
+}
+
+.inputbox input:hover {
+    background-color: #eeeeee75;
+    transform: scale(1.1)
+}
+
+.inputbox input:focus-visible {
+    outline: 3px solid #0170B9;
+}
+
+.inputbox label {
+    font-size: 0, 75rem;
+    font-weight: 600;
+    color: rgb(0, 0, 0);
+}
+
+.inputbox input::placeholder {
+    color: #000000aa;
+}
+
+.msgfinal {
+    padding: 40px;
+    text-align: center;
+    justify-content: center;
+
+}
+
+.error {
+    color: #e63636;
+    font-size: 14px;
+    margin: 0;
+}
+
+.errorH {
+    display: none;
+}
+
+
+.invalido {
+    border: 3px solid red;
+
+}
+
+
+.rua {
+    width: 400px;
+}
+
+
+#icon {
+    transform: translateY(-50%);
+    margin-top: 45px;
+    margin-left: 10px;
+    background: url('img/olho.png');
+    background-size: cover;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+#icon.hide {
+    background: url('img/olhofechado.png');
+    background-size: cover;
+
+}
+
+
+#icon2 {
+    transform: translateY(-50%);
+    margin-top: 45px;
+    margin-left: 10px;
+    background: url('img/olho.png');
+    background-size: cover;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+#icon2.hide {
+    background: url('img/olhofechado.png');
+    background-size: cover;
+
+}
+
+
+.gender-input {
+    margin-left: 250px;
+    display: flex;
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+    align-items: center;
+}
+
+
+
+.continue-button {
+    justify-content: center;
+    display: flex;
+
+}
+
+.continue-button button {
+    width: 300px;
+    height: 50px;
+    background-color: #0170B9;
+    border-radius: 20px;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0px 0px 8px #000000b6;
+
+
+}
+
+.continue-button button:hover {
+    background-color: #0170B9;
+    color: white;
+    transform: scale(1.1);
+}
+
+.continue-button button {
+    font-size: medium;
+    font-weight: bold;
+    color: #000000;
+}
+
+
+.btnlog {
+    font-family: sans-serif;
+    height: 300px;
+    width: 300px;
+    padding: 7px 7px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: small;
+    background: #0170B9;
+    color: black;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0px 0px 2px rgb(46, 46, 46);
+    font-size: 100%;
+    cursor: pointer;
+}
+
+.btnlog:hover {
+    background: #0170B9;
+    color: white;
+    transform: scale(1.5);
+}
+
+
+
+
+@media screen and (max-width:1024px) {
+    .form-header img {
+        display: none;
+    }
+
+    .formulario {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media screen and (max-width:650px) {
+
+    .formulario {
+
+        width: 100%;
+        height: 100%;
+
+    }
+
+
+    .formulario input {
+        width: 80%;
+
+    }
+
+    .body {
+        width: 100%;
+        height: auto;
+    }
+
+    .inputgroup {
+        margin: auto;
+        flex-direction: column;
+        flex-wrap: nowrap;
+
+    }
+
+
+
+    .form-header {
+        justify-content: center;
+    }
+
+
+}
